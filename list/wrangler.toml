@@ -1,0 +1,10 @@
+name = "todo-list"
+main = "src/list.js"
+compatibility_date = "2022-09-07"
+workers_dev = false
+usage_model = "unbound"
+
+[[ d1_databases ]]
+binding = "db" # i.e. available in your Worker on env.DB
+database_name = "sample-todo"
+database_id = "d3af7235-7650-4084-b86f-25d72fabde5b"

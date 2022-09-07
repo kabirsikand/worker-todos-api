@@ -1,3 +1,3 @@
-DROP TABLE IF EXISTS Todos;
-CREATE TABLE Todos (TodoID INT, Todo TEXT, Completed BOOLEAN, PRIMARY KEY (`TodoID`));
-INSERT INTO Todos (TodoID, Todo, Completed) VALUES (1, "Fold my laundry", 0),(4, "Unload the dishwasher", 0),(11, "Find Nemo", 0),(13, "Water monstera", 1);
+DROP TABLE IF EXISTS todos;
+CREATE TABLE todos (id INTEGER PRIMARY KEY, todo TEXT, todoStatus BOOLEAN NOT NULL CHECK (todoStatus IN (0, 1)));
+INSERT INTO todos (todo, todoStatus) VALUES ("Fold my laundry", 0),("Unload the dishwasher", 0),("Find Nemo", 0),("Water monstera", 1);

@@ -1,0 +1,17 @@
+name = "todo-gateway"
+main = "src/gateway.js"
+compatibility_date = "2022-09-07"
+workers_dev = false
+usage_model = "unbound"
+
+routes =  [
+    {pattern="todos.radiobox.tv", custom_domain=true, zone_name="radiobox.tv"}
+]
+
+services = [
+    {binding = "get",service = "todo-get",environment="production"},
+    {binding = "delete",service = "todo-delete",environment="production"},
+    {binding = "create",service = "todo-create"},
+    {binding = "update",service = "todo-update"},
+    {binding = "list",service = "todo-list"}
+]
